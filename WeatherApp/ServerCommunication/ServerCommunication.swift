@@ -23,14 +23,23 @@ class ServerCommunication {
         try JSONDecoder().decode(WeatherModel.self, from: data)
     })
     
-    private func requestBuilder(by coordinates: (Double, Double)) -> URLRequest? {
+    private func requestBuilder(by coordinates: (Double?, Double?)? = (lat: nil, lon: nil), by cityName: String? = nil) -> URLRequest? {
         var urlBuilder = URLComponents(string: ROOT)
+        if coordinates != nil {
         urlBuilder?.queryItems = [
-            URLQueryItem(name: "lat", value: String(coordinates.0)),
-            URLQueryItem(name: "lon", value:  String(coordinates.1)),
+            URLQueryItem(name: "lat", value: String(coordinates!.0!)),
+            URLQueryItem(name: "lon", value:  String(coordinates!.1!)),
             URLQueryItem(name: "appid", value: API_KEY)
         ]
+        }
+        if cityName != nil {
+            urlBuilder?.queryItems = [
+                URLQueryItem(name: "q", value: cityName),
+                URLQueryItem(name: "appid", value: API_KEY)
+            ]
+        }
         guard let url = urlBuilder?.url else {return nil}
+        print(url)
         var request = URLRequest(url: url)
         request.httpMethod = methods.get
         return request
@@ -38,6 +47,12 @@ class ServerCommunication {
     
     public func fetchWeather(for coordinates: (Double, Double), onSuccess: @escaping(Result<WeatherModel, NetworkError>) -> Void){
         if let request = requestBuilder(by: coordinates) {
+            call(request: request, completion: onSuccess)
+        }
+    }
+    
+    public func fetchWeather(for city: String, onSuccess: @escaping(Result<WeatherModel, NetworkError>) -> Void) {
+        if let request = requestBuilder(by: nil, by: city) {
             call(request: request, completion: onSuccess)
         }
     }

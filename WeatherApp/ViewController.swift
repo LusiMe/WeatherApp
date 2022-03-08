@@ -69,9 +69,6 @@ extension ViewController: CLLocationManagerDelegate {
             }
         }
     }
-  
-    
-    
     }
 
 extension ViewController: UISearchBarDelegate {

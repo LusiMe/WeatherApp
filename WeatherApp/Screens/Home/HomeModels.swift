@@ -10,17 +10,21 @@ import Foundation
 enum Home {
     
     //MARK: Use cases
-    enum Home {
+    enum Weather {
         struct Request {
             let latitude, longitude: Double
         }
         
         struct Responce {
-            let weather: WeatherResult
+            let weather, city: WeatherResult
         }
         
         struct ViewModelSuccess {
-            
+            let city, weather: String
+        }
+        
+        struct ViewModelFailure{
+            let errorMessage: String
         }
     }
 }

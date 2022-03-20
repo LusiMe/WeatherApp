@@ -26,7 +26,6 @@ class Worker {
     private func parse(jsonData: Data) -> [CityModel]? {
         do {
             let decodedData = try JSONDecoder().decode([CityModel].self, from: jsonData)
-//            print(decodedData) // is printing
             return decodedData
         } catch {
             print("decode error", error)

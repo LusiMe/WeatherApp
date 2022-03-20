@@ -16,11 +16,11 @@ enum Home {
         }
         
         struct Responce {
-            let weather, city: WeatherResult
+            let weatherData: WeatherResponce
         }
         
         struct ViewModelSuccess {
-            let city, weather: String
+            let city, weatherFullDescriprion, weatherShortDescription: String
         }
         
         struct ViewModelFailure{

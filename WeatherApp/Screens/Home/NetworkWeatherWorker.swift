@@ -21,7 +21,6 @@ protocol GetCity {
 class NetworkWeatherWorker {
     var interactor: WeatherInteractor?
     var dataAccess: ServerCommunication?
-    //implement data request for serverCommunicationStore
     
     private static let API_KEY = "f21454c4f47c7d670854668f10e35e95"
     
@@ -49,6 +48,7 @@ class NetworkWeatherWorker {
         guard let url = urlBuilder?.url else {return nil}
         var request = URLRequest(url: url)
         request.httpMethod = methods.get
+        print("request", request)
         return request
     }
     

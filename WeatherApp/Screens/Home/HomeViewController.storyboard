@@ -38,7 +38,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4b8-fv-eIi"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MOQ-vA-3Yg" firstAttribute="centerX" secondItem="f4e-tu-df2" secondAttribute="centerX" id="0eq-He-E3L"/>
                             <constraint firstItem="MOQ-vA-3Yg" firstAttribute="leading" secondItem="4b8-fv-eIi" secondAttribute="leading" constant="87" id="8gN-Ub-paJ"/>
@@ -58,8 +58,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

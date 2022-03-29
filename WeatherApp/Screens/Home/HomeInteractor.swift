@@ -29,7 +29,6 @@ class WeatherInteractor: WeatherBusinessLogic {
     //move all details to the worker such as request, on success, parsing
     func onWeatherSuccess(result: Result<WeatherModel, NetworkError>) {
         let responce = Home.Weather.Responce(weatherData: result)
-        //i could pass error here^ I need to think how to prevent it
         presenter?.presentWeather(response: responce)
         }
     }

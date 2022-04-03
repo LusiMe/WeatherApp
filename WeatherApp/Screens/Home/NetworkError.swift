@@ -2,7 +2,7 @@
 //  NetworkError.swift
 //  WeatherApp
 //
-//  Created by Mark Parfenov on 17/03/2022.
+//  Created by Luda Parfenova on 17/03/2022.
 //
 
 import Foundation

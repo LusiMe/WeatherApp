@@ -2,7 +2,7 @@
 //  HomePresenter.swift
 //  WeatherApp
 //
-//  Created by Mark Parfenov on 08/03/2022.
+//  Created by Luda Parfenova on 08/03/2022.
 //
 
 import Foundation

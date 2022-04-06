@@ -64,46 +64,6 @@ class ServerCommunication {
 }
 }
 
-// разбить по файлам
-//enum NetworkError: Error {
-//    case transportError(Error)
-//    case serverError(statusCode: Int)
-//    case noData
-//    case decodingError(Error)
-//    case encodingError(Error)
-//}
-//
-//extension NetworkError {
-//    init?(data: Data?, response: URLResponse?, error: Error?) {
-//        if let error = error {
-//            self = .transportError(error)
-//            return
-//        }
-//        
-//        if let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
-//            self = .serverError(statusCode: response.statusCode)
-//            return
-//        }
-//        
-//        if data == nil {
-//            self = .noData
-//        }
-//        return nil
-//    }
-//}
 typealias WeatherResult = Result<Data, NetworkError>
 typealias WeatherResponce = Result<WeatherModel, NetworkError>
-//TODO: where to store?
-//typealias WeatherResult = Result<WeatherModel, NetworkError>
 
-//extension URLSession {
-//    func dataTask(with request: URLRequest, resultHandler: @escaping(WeatherResult) -> Void) -> URLSessionDataTask {
-//        return self.dataTask(with: request) { data, responce, error in
-//            if let networkError = NetworkError(data: data, response: responce, error: error) {
-//                resultHandler(.failure(networkError))
-//                return
-//            }
-//            resultHandler(.success(data!))
-//        }
-//    }
-//}

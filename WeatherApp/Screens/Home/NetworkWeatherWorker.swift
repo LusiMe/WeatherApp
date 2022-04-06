@@ -17,7 +17,6 @@ protocol GetCity {
     func findCity(with letters: String) -> [CityModel]?
 }
 
-
 class NetworkWeatherWorker {
     var interactor: WeatherInteractor?
     var dataAccess: ServerCommunication?

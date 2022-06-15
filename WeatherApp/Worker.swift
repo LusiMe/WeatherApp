@@ -1,10 +1,3 @@
-//
-//  Worker.swift
-//  WeatherApp
-//
-//  Created by Mark Parfenov on 06/03/2022.
-//
-
 import Foundation
 
 class Worker {

@@ -1,10 +1,3 @@
-//
-//  SearchTable.swift
-//  WeatherApp
-//
-//  Created by Mark Parfenov on 06/03/2022.
-//
-
 import UIKit
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

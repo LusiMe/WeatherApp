@@ -1,10 +1,3 @@
-//
-//  WeatherModel.swift
-//  WeatherApp
-//
-//  Created by Mark Parfenov on 01/03/2022.
-//
-
 import Foundation
 
 struct WeatherModel: Codable {

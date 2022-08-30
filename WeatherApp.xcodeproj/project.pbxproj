@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C63F4E4227D4D61B006F05EF /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F4E4127D4D61B006F05EF /* SearchTableViewController.swift */; };
 		C63F4E4527D4D71E006F05EF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F4E4427D4D71E006F05EF /* SearchTableViewCell.swift */; };
+		C655CC16287C816900A5127E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655CC15287C816900A5127E /* Utils.swift */; };
 		C68275D327D4E8C200765960 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = C68275D227D4E8C200765960 /* cities.json */; };
 		C68275D627D4E9EC00765960 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68275D527D4E9EC00765960 /* Worker.swift */; };
 		C6D4E56D27CCED44000CE59B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D4E56C27CCED44000CE59B /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		C63F4E4127D4D61B006F05EF /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C63F4E4427D4D71E006F05EF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		C655CC15287C816900A5127E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C68275D227D4E8C200765960 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		C68275D527D4E9EC00765960 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		C6D4E56927CCED44000CE59B /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		C655CC13287C814300A5127E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6D4E57027CCED44000CE59B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C6D4E56027CCED44000CE59B = {
 			isa = PBXGroup;
 			children = (
@@ -76,13 +86,12 @@
 		C6D4E56B27CCED44000CE59B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				C655CC13287C814300A5127E /* Controller */,
 				C60CFC8B27D4E5E20063F4F8 /* Source */,
 				C6D4E58627CE67FC000CE59B /* Model */,
-				C6D4E58127CE20F1000CE59B /* ServerCommunication */,
+				C6D4E58127CE20F1000CE59B /* Worker */,
 				C6D4E56C27CCED44000CE59B /* AppDelegate.swift */,
 				C6D4E56E27CCED44000CE59B /* SceneDelegate.swift */,
-				C6D4E57027CCED44000CE59B /* ViewController.swift */,
-				C68275D527D4E9EC00765960 /* Worker.swift */,
 				C63F4E4127D4D61B006F05EF /* SearchTableViewController.swift */,
 				C63F4E4427D4D71E006F05EF /* SearchTableViewCell.swift */,
 				C6D4E57227CCED45000CE59B /* Main.storyboard */,
@@ -93,12 +102,14 @@
 			path = WeatherApp;
 			sourceTree = "<group>";
 		};
-		C6D4E58127CE20F1000CE59B /* ServerCommunication */ = {
+		C6D4E58127CE20F1000CE59B /* Worker */ = {
 			isa = PBXGroup;
 			children = (
 				C6D4E58227CE211A000CE59B /* ServerCommunication.swift */,
+				C68275D527D4E9EC00765960 /* Worker.swift */,
+				C655CC15287C816900A5127E /* Utils.swift */,
 			);
-			path = ServerCommunication;
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		C6D4E58627CE67FC000CE59B /* Model */ = {
@@ -181,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D4E57127CCED44000CE59B /* ViewController.swift in Sources */,
+				C655CC16287C816900A5127E /* Utils.swift in Sources */,
 				C68275D627D4E9EC00765960 /* Worker.swift in Sources */,
 				C6D4E58327CE211B000CE59B /* ServerCommunication.swift in Sources */,
 				C63F4E4227D4D61B006F05EF /* SearchTableViewController.swift in Sources */,

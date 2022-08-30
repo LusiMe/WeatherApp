@@ -37,6 +37,19 @@ class ViewController: UIViewController {
             locationManager.startMonitoringSignificantLocationChanges()
         }
     }
+    
+    func onWeatherSuccess(result: Result<WeatherModel, NetworkError>) {
+        DispatchQueue.main.async {
+            switch result{
+            case .success(let weather):
+                self.weather.text = weather.weather[0].description
+                self.locationLabel.text = weather.name
+                self.weatherIcon.image = UIImage(named: weather.weather[0].main)
+            case .failure(let error):
+                self.weather.text = Utils.shared.specifyError(error)
+            }
+        }
+    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -53,22 +66,10 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("locationManager didFailWithError ", error) //TODO: show to the user
+        print("locationManager didFailWithError ", error)
+        self.weather.text = "location manager failed with error /(error)"
     }
-    func onWeatherSuccess(result: Result<WeatherModel, NetworkError>) {
-        
-        DispatchQueue.main.async {
-            switch result{
-            case .success(let weather):
-                self.weather.text = weather.weather[0].description
-                self.locationLabel.text = weather.name
-                self.weatherIcon.image = UIImage(named: weather.weather[0].main)
-            case .failure(let error):
-                //TODO: worker for error switch
-                print("on success error", error)
-            }
-        }
-    }
+ 
     }
 
 extension ViewController: UISearchBarDelegate {

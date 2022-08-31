@@ -1,3 +1,4 @@
+
 import Foundation
 
 struct WeatherModel: Codable {
@@ -12,7 +13,6 @@ struct Weather: Codable {
 struct CityModel: Codable, Hashable {
     let name, country: String
 }
-
 
 struct ResultDecoder<T> {
     

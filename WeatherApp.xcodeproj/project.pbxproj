@@ -62,6 +62,7 @@
 		C655CC13287C814300A5127E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C63F4E4127D4D61B006F05EF /* SearchTableViewController.swift */,
 				C6D4E57027CCED44000CE59B /* ViewController.swift */,
 			);
 			path = Controller;
@@ -92,7 +93,6 @@
 				C6D4E58127CE20F1000CE59B /* Worker */,
 				C6D4E56C27CCED44000CE59B /* AppDelegate.swift */,
 				C6D4E56E27CCED44000CE59B /* SceneDelegate.swift */,
-				C63F4E4127D4D61B006F05EF /* SearchTableViewController.swift */,
 				C63F4E4427D4D71E006F05EF /* SearchTableViewCell.swift */,
 				C6D4E57227CCED45000CE59B /* Main.storyboard */,
 				C6D4E57527CCED4A000CE59B /* Assets.xcassets */,
